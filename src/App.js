@@ -5,14 +5,16 @@ import Section from "./Components/Section/Section.jsx";
 
 class App extends Component {
   state = {
-    good: 2,
-    neutral: 3,
-    bad: 1,
+    good: 0,
+    neutral: 0,
+    bad: 0,
   };
 
-  plus = (event) => {
-    console.log(event);
-    // this.setState((prevState) => ({ event: prevState.event + 1 }));
+  plus = (key) => {
+    // console.log(event);
+    this.setState((prevState) => ({
+      [key]: prevState[key] + 1,
+    }));
   };
   render() {
     return (
