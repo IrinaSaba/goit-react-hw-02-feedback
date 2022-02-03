@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import s from './FeedbackOptions.module.scss'
 const FeedbackOptions = ({options, onLeaveFeedback}) => {
   let feeds = Object.keys(options)
@@ -13,5 +14,11 @@ const FeedbackOptions = ({options, onLeaveFeedback}) => {
       
     );
 }
- 
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+}
+
+
 export default FeedbackOptions;
